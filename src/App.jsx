@@ -12,17 +12,27 @@ import ContactUs from './pages/ContactUs';
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
         <nav>
           <h1>Week-6 Lab</h1>
-            <div className='nav-links'>
-              <NavLink to="/login">LogIn</NavLink>
-              <NavLink to="/home">Home</NavLink>
-              <NavLink to="/aboutus">About Us</NavLink>
-              <NavLink to="/contactus">Contact Us</NavLink>
-            </div>  
+          <div className="nav-links">
+          {!isLoggedIn ? (
+            <NavLink to="/login">Log In</NavLink>
+          ) : (
+            <NavLink to="/login" className="logout-button" onClick={handleLogout}>
+              Log Out
+            </NavLink>
+          )}
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/aboutus">About Us</NavLink>
+            <NavLink to="/contactus">Contact Us</NavLink>
+          </div>
         </nav>
 
         <Routes>

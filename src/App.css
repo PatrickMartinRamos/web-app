@@ -47,3 +47,17 @@ nav .nav-links a.active {
   box-sizing: border-box;
 }
 
+.logout-button {
+  background-color: transparent;
+  color: #bbb;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: white;
+}
+

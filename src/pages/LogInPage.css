@@ -59,3 +59,17 @@
   font-size: 13px;
   text-align: center;
 }
+
+.logout-button {
+  background-color: transparent;
+  color: #bbb;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: white;
+}
