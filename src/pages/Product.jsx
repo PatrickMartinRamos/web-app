@@ -26,6 +26,7 @@ export default function ProductDetails({Products}) {
       {_product && (
         <div key={_product.id}>
           <h2>{_product.productName}</h2>
+          <p>Price: {_product.price}</p>
           <p>Seller Name {_product.seller}</p>
           <p>{_product.productDetails }</p>
         </div>
